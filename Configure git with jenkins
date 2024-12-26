@@ -1,0 +1,21 @@
+SSS
+1.Install git on jenkins server 
+  Centos : sudo yum install git -y 
+  git --version 
+2.Install git p;ugin in jenkins
+  Go to jenkins dash board --> Manage Jenkins-->Manage plugins -->under available tab-->Install git plugin without restart 
+3.If git repository is private then we need to create credentials for git .
+  Jenkins -->Credentials -->Global --> Add credential --> give username and password
+4.Configure global git settings in jenkins
+  Jenkins-->Manage jenkins -->Global tool configuration -->Scroll down to git section -->Click on Add -->provide git installed 
+   For linux --> path : /usr/bin/git
+   For windows --> open cmd prompt --> where git --> copy full path and paste it here 
+   Provide credentials which u created earlier .
+4.If git repository is private then we need to create credentials for git .
+  Jenkins -->Credentials -->Global --> Add credential --> give username and password
+5.Create a jenkins job and give the repository url in the job 
+   source code management : https://github.com/username/repository.git
+   credentials : username and password
+   Branch : master 
+6.Trigger build
+ 
