@@ -1,95 +1,85 @@
 sss
-
-Here are the steps in plain text:
-
+Installation of Git
 ---
-
-Step 1: Install Git
-
-1. Download Git from:  
+Windows : Download and Install git from git-scm.com
+1. Download Git from:
    https://git-scm.com/
+2. Run the installer and follow the installation steps.
+3. Verify the installation:
+   - Open Command Prompt (Windows) or Terminal (Linux/macOS).
+   - Run the command:
+     git --version
+    This should display the Git version if installed correctly.
 
-2. Run the installer and follow the installation steps.  
-   (Keep default options unless necessary)
-
-3. Verify the installation:  
-   - Open Command Prompt (Windows) or Terminal (Linux/macOS).  
-   - Run the command:  
-     git --version  
-   This should display the Git version if installed correctly.
-
+Linux : yum install git -y
+       check git --version
 ---
 
 Step 2: Set Up Git with Your Name and Email
-
 1. Open Command Prompt (Windows) or Terminal (Linux/macOS).
-
-2. Configure Git with your name and email:  
-   Run the following commands:  
-   git config --global user.name "Your Name"  
+2. Configure Git with your name and email:
+   Run the following commands:
+   git config --global user.name "Your Name"
    git config --global user.email "your-email@example.com"
-
-3. Verify the configuration:  
-   Run:  
-   git config --global --list  
+   To identify who committed the code.
+3. Verify the configuration:
+   Run:
+   git config --global --list
    This will display your settings.
 
 ---
-
 Step 3: Install GitHub Desktop (Optional)
-
-1. Go to:  
+1. Go to:
    https://desktop.github.com/
-
 2. Download and install GitHub Desktop for your operating system.
-
 3. Follow the on-screen instructions to log in with your GitHub account.
-
 ---
 
-Step 4: Set Up a GitHub Account
-
-1. Visit:  
-   https://github.com/
-
+2 Ways to commit code
+1st Method: Clone an Existing GitHub Repository
+1. Set Up a GitHub Account
+  Visit: https://github.com/
 2. Click "Sign up" and enter your username, email, and password.
-
 3. Verify your email address.
+4.Log in to your GitHub account.
+5.Create Your First GitHub Repository
+6.Click "New" to create a new repository.
+7.Enter the repository name, select either "Private" and click "Create repository."
+8.Open cmd or gitbash enter this command
+  git clone https://github.com/username/repository.git
+  cd repostitoryname
+  modify files
+  git status -s
+  git add .
+  git status -s
+  git commit -a -m "Added files "
+  git push (Here it prompts for authentication )
+
+
 
 ---
 
-Step 5: Create Your First GitHub Repository
-
-1. Log in to your GitHub account.
-
-2. Click "New" to create a new repository.
-
-3. Enter the repository name, select either "Public" or "Private," and click "Create repository."
-
----
-
-Step 6: Connect Your Local Project to GitHub
+2nd method : Connect Your Local Project to GitHub
 
 1. Open Command Prompt or Terminal in your local project folder.
-
-2. Run the following commands:  
-   git init  
-   git add .  
-   git commit -m "First commit"  
-   git remote add origin https://github.com/your-username/repo-name.git  
+2. Run the following commands:
+   mkdir my_project
+   cd my_project
+   git init
+   Create files A.txt B.txt
+   git status -s
+   git add .
+   git status -s
+   git commit -a -m "Added files "
+   git remote add origin https://github.com/your-username/repo-name.git
    git push -u origin master
 
-   Replace your-username/repo-name with your GitHub username and repository name.
+
 
 ---
 
 Step 7: Verify Your Code on GitHub
-
 1. Go to your repository on GitHub.
-
 2. Your files should now appear in the repository.
 
 ---
-
-Done!  
-You have successfully installed Git, created a GitHub account, and pushed your project to GitHub.
