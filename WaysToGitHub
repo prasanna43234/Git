@@ -1,0 +1,145 @@
+sss
+---
+
+Git Commands: From Basic to Advanced
+
+---
+
+1. Using HTTPS
+
+- What it is:  
+  HTTPS uses your GitHub account's username and a personal access token (or password) for authentication.
+
+- Steps:  
+  1. Clone a repository:  
+     git clone https://github.com/username/repository.git  
+  2. When prompted, enter your username and personal access token.  
+
+- Advantages:  
+  - Easy to set up and use.  
+  - Works through firewalls and proxies.  
+
+- Disadvantages:  
+  - Requires entering credentials frequently unless you cache them.  
+
+- Caching Credentials:  
+  To avoid entering credentials repeatedly, you can cache them:  
+  git config --global credential.helper cache  
+
+---
+
+2. Using SSH
+
+- What it is:  
+  SSH uses public-private key pairs for secure authentication without requiring your GitHub credentials each time.
+
+- Steps:  
+  1. Generate an SSH key:  
+     ssh-keygen -t ed25519 -C "your.email@example.com"  
+     (For older systems: use rsa instead of ed25519.)  
+  2. Add the SSH key to your GitHub account:  
+     - Copy the public key:  
+       cat ~/.ssh/id_ed25519.pub  
+     - Go to GitHub → Settings → SSH and GPG Keys → New SSH Key.  
+     - Paste the public key and save.  
+  3. Clone a repository:  
+     git clone git@github.com:username/repository.git  
+
+- Advantages:  
+  - No need to repeatedly enter credentials.  
+  - More secure than HTTPS.  
+
+- Disadvantages:  
+  - Initial setup is slightly more complex.  
+
+---
+
+3. Using GitHub CLI (gh)
+
+- What it is:  
+  The GitHub CLI (gh) is a command-line tool that simplifies GitHub operations, including authentication.
+
+- Steps:  
+  1. Install GitHub CLI:  
+     Follow instructions from https://cli.github.com/.  
+  2. Authenticate:  
+     gh auth login  
+     Choose HTTPS or SSH during the setup process.  
+  3. Clone a repository:  
+     gh repo clone username/repository  
+
+- Advantages:  
+  - Easy authentication and management of GitHub resources.  
+  - Supports additional features like creating issues, pull requests, and releases.  
+
+- Disadvantages:  
+  - Requires installing and learning the CLI tool.  
+
+---
+
+4. Using a PAT (Personal Access Token)
+
+- What it is:  
+  Personal Access Tokens are used instead of passwords for HTTPS-based connections. This is necessary since GitHub deprecated password authentication for Git operations.
+
+- Steps:  
+  1. Generate a PAT:  
+     - Go to GitHub → Settings → Developer Settings → Personal Access Tokens → Tokens (Classic) → Generate new token.  
+     - Select scopes (permissions) as needed and generate.  
+  2. Use the PAT:  
+     Replace your password with the PAT when prompted:  
+     git clone https://github.com/username/repository.git  
+
+- Advantages:  
+  - Works like a password but more secure.  
+
+- Disadvantages:  
+  - Requires managing and securely storing the PAT.  
+
+---
+
+5. Using OAuth for Third-Party Applications
+
+- What it is:  
+  OAuth tokens allow GitHub access via third-party apps (e.g., VSCode, GitHub Desktop) without directly using your credentials.
+
+- Steps:  
+  - Log in to GitHub within the application.  
+  - Grant necessary permissions to the app.  
+
+- Advantages:  
+  - Simplifies integration with external tools.  
+
+- Disadvantages:  
+  - Limited to app-specific use.  
+
+---
+
+6. Using GitHub Desktop
+
+- What it is:  
+  GitHub Desktop is a graphical user interface for GitHub, designed to simplify version control operations.
+
+- Steps:  
+  1. Install GitHub Desktop: https://desktop.github.com/.  
+  2. Log in using your GitHub account.  
+  3. Clone, commit, and push repositories using the app.  
+
+- Advantages:  
+  - User-friendly interface.  
+  - No command-line experience needed.  
+
+- Disadvantages:  
+  - Limited flexibility compared to CLI.  
+
+---
+
+Choosing the Right Method:
+
+- Use HTTPS if you want a quick setup and work across various networks.  
+- Use SSH if you prefer a more secure and credential-free experience after setup.  
+- Use GitHub CLI for integrated GitHub workflows.  
+- Use GitHub Desktop or OAuth for GUI-based operations or app-specific needs.  
+- Use PAT if you're required to authenticate for specific use cases like CI/CD.  
+
+---
