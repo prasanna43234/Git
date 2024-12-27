@@ -1,72 +1,71 @@
-2 Ways to commit code
-=======
-2 Ways to commit code
->>>>>>> c150a2cab7de409102bfbd9d7cfba8f3dd6fa60f
-1st Method: Clone an Existing GitHub Repository
-1. Set Up a GitHub Account
-  Visit: https://github.com/
-2. Click "Sign up" and enter your username, email, and password.
-3. Verify your email address.
-4.Log in to your GitHub account.
-5.Create Your First GitHub Repository
-6.Click "New" to create a new repository.
-7.Enter the repository name, select either "Private" and click "Create repository."
-<<<<<<< HEAD
-8.Open cmd or gitbash enter this command
-  git clone https://github.com/username/repository.git
-  cd repostitoryname
-  modify files
-=======
-8.Open cmd or gitbash enter this command
-  git clone https://github.com/username/repository.git
-  cd repostitoryname
-  modify files
->>>>>>> c150a2cab7de409102bfbd9d7cfba8f3dd6fa60f
-  git status -s
-  git add .
-  git status -s
-  git commit -a -m "Added files "
-<<<<<<< HEAD
-  git push -u origin master
+ssss
 
-
-=======
-  git push (Here it prompts for authentication )
-
-
->>>>>>> c150a2cab7de409102bfbd9d7cfba8f3dd6fa60f
 
 ---
 
-2nd method : Connect Your Local Project to GitHub
+2 Ways to Commit Code
 
-1. Open Command Prompt or Terminal in your local project folder.
-<<<<<<< HEAD
-2. Run the following commands:
-=======
-2. Run the following commands:
->>>>>>> c150a2cab7de409102bfbd9d7cfba8f3dd6fa60f
-   mkdir my_project
-   cd my_project
-   git init
-   Create files A.txt B.txt
-   git status -s
-   git add .
-   git status -s
-   git commit -a -m "Added files "
-<<<<<<< HEAD
-   git remote add origin https://github.com/your-username/repo-name.git
-=======
-   git remote add origin https://github.com/your-username/repo-name.git
->>>>>>> c150a2cab7de409102bfbd9d7cfba8f3dd6fa60f
-   git push -u origin master
+---
 
+1st Method: Clone an Existing GitHub Repository
 
+1. Set Up a GitHub Account  
+   - Visit: https://github.com/  
+   - Click "Sign up" and enter your username, email, and password.  
+   - Verify your email address.  
+   - Log in to your GitHub account.
+
+2. Create Your First GitHub Repository  
+   - Click "New" to create a new repository.  
+   - Enter the repository name, select "Private" or "Public," and click "Create repository."
+
+3. Clone the Repository and Commit Changes  
+   - Open Command Prompt or Git Bash and run:  
+     git clone https://github.com/username/repository.git  
+     cd repositoryname  
+   - Modify files as needed.  
+   - Check the status:  
+     git status -s  
+   - Stage the changes:  
+     git add .  
+     git status -s  
+   - Commit the changes:  
+     git commit -a -m "Added files"  
+   - Push the changes:  
+     git push -u origin master  
+
+---
+
+2nd Method: Connect Your Local Project to GitHub
+
+1. Create a New Local Project  
+   - Open Command Prompt or Terminal in your desired directory.  
+   - Run the following commands:  
+     mkdir my_project  
+     cd my_project  
+     git init  
+   - Create files (e.g., A.txt, B.txt).  
+
+2. Stage and Commit Changes  
+   - Check the status:  
+     git status -s  
+   - Stage the changes:  
+     git add .  
+     git status -s  
+   - Commit the changes:  
+     git commit -a -m "Added files"  
+
+3. Connect to GitHub and Push  
+   - Add the remote repository:  
+     git remote add origin https://github.com/your-username/repo-name.git  
+   - Push the changes:  
+     git push -u origin master  
 
 ---
 
 Step 7: Verify Your Code on GitHub
-1. Go to your repository on GitHub.
-2. Your files should now appear in the repository.
 
+1. Go to your repository on GitHub.  
+2. Your files should now appear in the repository.  
 
+---
